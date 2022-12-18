@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body >
+        <style>
+            * {
+
+                margin: 0;
+                padding: 0;
+            }
+
+            a {
+                color: #111111;
+            }
+            a:hover {
+                color: #757575;
+            }
+            a:active {
+                color: #2F8DE4;
+            }
+            a:visited {
+                color: #111111;
+            }
+
+            .full_area_box {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                box-sizing: border-box;
+                display: flex;
+                width: 1280px;
+                height: auto;
+                align-content: center;
+            }
+            .full_area_box .header .a {
+                display: flex;
+                padding: 12 0;
+                height: auto;
+            }
+            .header {
+                font-size: 16px;
+                color: #111111;
+                font-weight: bold;
+                width: 1280px;
+                display: flex;
+                justify-content: space-between;
+            }
+            .logo-box {
+                display: flex;
+                justify-content: center;
+            }
+            LI {
+                list-style: none;
+            }
+            li a {
+                text-decoration: none;
+            }
+
+            .list_menu {
+                display: flex;
+                align-items: center;
+            }
+            .list_menu a {
+                list-style: none;
+                text-decoration: none;
+            }
+            .list_lang {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-right: 12px;
+            }
+            .list_lang li {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-right: 24px;
+                font-size: 12px;
+            }
+
+            .banner {
+                display: flex;
+                margin-left: auto;
+                margin-right: auto;
+                align-items: center;
+
+                width: 1280px;
+                height: 850px;
+                color: white;
+                background-image: linear-gradient(to left, rgba(255, 255, 255, 0)10%, rgba(255, 255, 255, 0.25)25%, rgba(255, 255, 255, 0.5)50%, rgba(255, 255, 255, 0.75)75%, rgba(255, 255, 255, 1)100%),url("https://i.postimg.cc/FKJmsCRm/image-15.png");
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .banner .text_box {
+                width: 320px;
+                display: flex;
+                flex-direction: column;
+
+                margin-left: 110px;
+            }
+
+            .banner .text_box h1 {
+                font-size: 32px;
+                display: inline-flex;
+                font-weight: bold;
+                color: #111111;
+
+            }
+            .banner .text_box p {
+                margin-top: 4px;
+                line-height: 20px;
+                display: inline-flex;
+                flex-direction: row;
+                width: 320px;
+                font-size: 12px;
+                color: #757575;
+            }
+            .banner .text_box .button {
+                display: flex;
+                flex-direction: column;
+                margin-top: 24px;
+                margin-left: -300;
+                margin-bottom: 300px;
+                border: 1px solid #2F8DE4;
+                border-radius: 4px;
+                width: 120px;
+                height: 32px;
+                text-decoration: none;
+                text-decoration-line: none;
+            }
+            .button p2 {
+
+                text-align: center;
+                text-decoration: none;
+                font-size: 8px;
+                color: #2F8DE4;
+
+            }
+            .button a {
+
+                background-color: none;
+                text-decoration-line: none;
+                padding-top: 8px;
+                padding-left: 24px;
+                padding-bottom: 8px;
+                font-size: 8px;
+                color: #2F8DE4;
+
+            }
+
+            #body-wrapper {
+                min-height: 100%;
+                position: relative;
+            }
+            #body-content {
+
+                padding-bottom: 320px;
+            }
+            .footer {
+                width: 100%;
+                background-color: #697885;
+                height: 320px;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+            }
+
+            .footer_content {
+                text-align: left;
+                margin-left: 340px;
+                margin-top: 100px;
+
+            }
+            .footer_content img {
+                margin-bottom: 24px;
+                width: 135px;
+
+            }
+            .footer_content p {
+                line-height: 28px;
+                color: #d9d9d9;
+                font-size: 12px;
+            }
+        </style>
+        <div id="body-wrapper">
+            <div id="body-content">
+                <div class="full_area_box">
+                    <div class="header">
+                        <!-- <a
+                        href="https://sites.google.com/tukorea.ac.kr/metaversity/%ED%99%88?pli=1"
+                        target="_blank"></a> -->
+                        <div class="logo-box">
+                            <div class="logo">
+                                <img src="https://i.postimg.cc/8P6Qtxdp/1.png">
+                            </div>
+                        </div>
+                        <div class="center">
+                            <ul class="list_menu">
+                                <a href="#">TU-MATA CAMPUS</a>
+                            </ul>
+                        </div>
+                        <div class="right">
+                            <ul class="list_lang">
+                                <li>
+                                    <img src="https://i.postimg.cc/cC4mTDKd/Vector.png" alt="마이페이지">
+                                </li>
+
+                                <li>
+                                    <a href="#">LAN</a>
+                                </li>
+                                <li>
+                                    <img src="https://i.postimg.cc/mkDqX3hW/Vector-1.png" alt="검색">
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="banner">
+                    <div class="text_box">
+                        <h1>TU - META CAMPUS</h1>
+                        <p>코로나 19에 발맞춘 가상 캠퍼스입니다. 수업, 상담, 실습이 모두 메타버스 환경에서 실제 현실과 매우 가깝게 이루어지는 비대면 캠퍼스인
+                            TU - META CAMPUS는 공학 인재 양성에 힘씁니다.</p>
+
+                        <div class="button">
+                            <a href="page_3.html">
+
+                                <p2>+ MORE INFO</p2>
+
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="footer_content">
+                <img src="https://i.postimg.cc/rpjgWXmf/1.png" alt="한국공학대학교">
+                <p>15073 경기도 시흥시 산기대학로 237 (정왕동) 한국공학대학교<br>
+                    TEL : 031-8041-1000<br>
+                    입학 TEL :1588-2036 (평일 : 09:00~17:00)
+
+                </p>
+            </div>
+        </footer>
+    </div>
+    <script type="text/javascript">
+        (function(w, d, a){
+            w.__beusablerumclient__ = {
+                load : function(src){
+                    var b = d.createElement("script");
+                    b.src = src; b.async=true; b.type = "text/javascript";
+                    d.getElementsByTagName("head")[0].appendChild(b);
+                }
+            };w.__beusablerumclient__.load(a + "?url=" + encodeURIComponent(d.URL));
+        })(window, document, "//rum.beusable.net/load/b221219e073623u674");
+        </script>>
+</body>
+</html>

@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            a{color: #111111;}
+            a:hover{color: #757575}
+            a:active{color: #2F8DE4}
+            a:visited{color: #111111}
+            .full_area_box {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                box-sizing: border-box;
+                display: flex;
+                width: 1280px;
+                height: auto;
+                align-content: center;
+            }
+            .full_area_box .header .a {
+
+                display: flex;
+                padding: 12 0;
+                height: auto;
+            }
+            .header {
+                font-size: 16px;
+                color: #111111;
+                font-weight: bold;
+                width: 1280px;
+                display: flex;
+                justify-content: space-between;
+            }
+            .logo-box {
+                display: flex;
+                justify-content: center;
+            }
+            LI {
+                list-style: none;
+            }
+            li a {
+                text-decoration: none;
+            }
+
+            .list_menu {
+                display: flex;
+                align-items: center;
+            }
+            .list_menu a {
+                list-style: none;
+                text-decoration: none;
+            }
+            .list_lang {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-right: 12px;
+            }
+            .list_lang li {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-right: 24px;
+                font-size: 12px;
+            }
+
+            .banner {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 1920px;
+                height: 640px;
+                color: white;
+                background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("https://i.postimg.cc/50FRngsF/image-26.png");
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            .banner .text_box h1 {
+                font-size: 96px;
+                display: inline-flex;
+                text-align: center;
+                justify-content: center;
+                font-weight: bold;
+
+            }
+            .banner .text_box p {
+                margin-top: 20px;
+                line-height: 20px;
+                display: inline-flex;
+                flex-direction: row;
+                text-align: center;
+                justify-content: center;
+                width: 480px;
+                font-size: 12px;
+            }
+            .banner .text_box {
+                width: 900px;
+                align-items: center;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+            }
+
+            .full_area_box .futurelab_vr {
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 805px;
+                margin-top: 96px;
+                box-sizing: border-box;
+
+            }
+
+            .full_area_box .futurelab_vr img {
+                width: 100%;
+                height: 805px;
+
+            }
+
+            .futurelab_vr .cover {
+                background-color: black;
+                width: 100%;
+                height: 805px;
+                position: absolute;
+                transition: transform 0.3s ease-in;
+                opacity: 0;
+
+            }
+            .futurelab_vr h1 {
+                margin-bottom: 16px;
+                color: #111111;
+            }
+
+            img:hover .cover {
+                opacity: 0.7;
+            }
+
+            .middle_bn {
+                display: flex;
+            }
+            .middle_bn img {
+                width: 100%;
+            }
+            .text_box2 {
+                display: flex;
+                flex-direction: column;
+
+                margin-top: 86px;
+
+                position: absolute;
+                margin-left: 310px;
+                width: 480px;
+            }
+            .middle_bn .text_box2 h1 {
+
+                font-size: 32px;
+                color: #111111;
+                margin-bottom: 42px;
+            }
+
+            .middle_bn .text_box2 p {
+                line-height: 30px;
+                font-size: 12px;
+                color: #3E3E3E;
+            }
+            .lab h1 {
+                margin-left: 300px;
+                margin-top: 270px;
+                margin-bottom: 16px;
+                font-size: 32px;
+            }
+
+            /*푸터*/
+            #body-wrapper {
+                min-height: 100%;
+                position: relative;
+            }
+            #body-content {
+
+                padding-bottom: 320px;
+            }
+            .footer {
+                width: 100%;
+                background-color: #697885;
+                height: 320px;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+            }
+
+            .footer_content {
+                text-align: left;
+                margin-left: 340px;
+                margin-top: 100px;
+
+            }
+            .footer_content img {
+                margin-bottom: 24px;
+                width: 135px;
+
+            }
+            .footer_content p {
+                line-height: 28px;
+                color: #d9d9d9;
+                font-size: 12px;
+            }
+            .vr_content {
+
+                justify-content: center;
+                margin-left: 280px;
+                width: 1300px;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 36px 18px;
+
+            }
+            .content_item {
+                box-shadow: 5px 5px 5px 5px#e0e0e0;
+                border-radius: 10px;
+                width: 400px;
+                flex: 0 0 calc((100%-54px)/4);
+                margin: 0 10px 0px;
+
+            }
+
+            .content_item h2 {
+                text-align: center;
+                margin-top: 34px;
+                margin-bottom: 34px;
+
+                color: #111111;
+            }
+            .content_item p {
+                height: 70px;
+                margin-left: 36px;
+                font-size: 12px;
+                color: #565656;
+                margin-bottom: 80px;
+                width: 340px;
+                line-height: 24px;
+            }
+            .content_item img {
+                width: 400px;
+                height: 236px;
+                border-radius: 10px 10px 0 0;
+            }
+            .content_item .button {
+                margin-left: 146px;
+                margin-bottom: 66px;
+                background-color: #2F8DE4;
+                border-radius: 8px;
+                width: 112px;
+                height: 32px;
+            }
+            .content_item .button p1 {
+
+                margin-left: 24px;
+                font-size: 10px;
+                color: white;
+                text-align: center;
+            }
+            .button a {
+                text-decoration: none;
+            }
+
+            .container {
+                justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(5, 246px);
+  grid-template-rows: repeat(2, 246px);
+  column-gap: 12px;
+  row-gap: 12px;
+
+  margin-bottom: 200PX;
+}
+
+
+
+
+        </style>
+
+        <div id="body-wrapper">
+            <div id="body-content">
+                <div class="full_area_box">
+                    <div class="header">
+                        <!-- <a
+                        href="https://sites.google.com/tukorea.ac.kr/metaversity/%ED%99%88?pli=1"
+                        target="_blank"></a> -->
+                        <div class="logo-box">
+                            <div class="logo">
+                                <img src="https://i.postimg.cc/8P6Qtxdp/1.png">
+                            </div>
+                        </div>
+                        <div class="center">
+                            <ul class="list_menu">
+                                <a href="#">TU-MATA CAMPUS</a>
+                            </ul>
+                        </div>
+                        <div class="right">
+                            <ul class="list_lang">
+                                <li>
+                                    <img src="https://i.postimg.cc/cC4mTDKd/Vector.png" alt="마이페이지">
+                                </li>
+
+                                <li>
+                                    <a href="#">LAN</a>
+                                </li>
+                                <li>
+                                    <img src="https://i.postimg.cc/mkDqX3hW/Vector-1.png" alt="검색">
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="banner">
+                    <div class="text_box">
+                        <h1>Future VR Lab</h1>
+                        <p>VR 실습이 가능한 메타버스 공학 교육 실습실입니다. 실시간 온라인 강의와 접목해 학습하는 시스템입니다. vr실습이 가능한 실습공간과 강의
+                            공간이 구분되어있습니다.</p>
+                    </div>
+                </div>
+                <div class="full_area_box">
+                    <div class="futurelab_vr">
+                        <h1>Future Lab 360° VR</h1>
+                        <a href="#"><img
+                            src="https://i.postimg.cc/8CtDdS1c/b119254e-e8d9-4d26-b9a3-41cd408fc742-waifu2x-photo-noise1-scale.png"></a>
+                    </div>
+
+                </div>
+                <div class="middle_bn">
+                    <div class="text_box2">
+                        <h1>Future VR Lab</h1>
+                        <p>국내 최대 개인형 부스 (20석 규모)의 VR실습실<br>
+                            대학 최초로 가상현실 실습 수업에 메타버스 개념을 도입<br>
+                            학생간, 학생과 교수간의 상호작용이 가능한 가상현실 콘텐츠를 개발
+                        </p>
+                    </div>
+                    <img src="https://i.postimg.cc/Vk8MV3tm/Group-13.png" alt="vrlab정보">
+                </div>
+
+                <div class="lab">
+                    <h1>Lab 운영교과목</h1>
+                </div>
+                <div class="vr_content">
+                    <div class="content_item">
+                        <img src="https://i.postimg.cc/d3kNCSdf/1-1-1.png" alt="전자기학">
+                        <h2>전자기학</h2>
+                        <p>물리학식으로만 경험하기 어려운 전기 및 전자기를 직접 눈으로 보고 활용할 수 있습니다.</p>
+                        <div class="button">
+                            <a href="#">
+                                <p1>LEARN MORE</p1>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="content_item">
+                        <img src="https://i.postimg.cc/zBVYd7KC/image-24.png" alt="반도체공정설계">
+                        <h2>반도체공정설계</h2>
+                        <p>많은 부품이나 모델이 필요한 설계의 경우 가상의 3D 모델링을 통해 반복 실습을 하여 실험해볼 수 있습니다.</p>
+                        <div class="button">
+                            <a href="#">
+                                <p1>LEARN MORE</p1>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="content_item">
+                        <img src="https://i.postimg.cc/1zdjzQVF/image-25.png" alt="전기자동차구동제어">
+                        <h2>전기자동차구동제어</h2>
+                        <p>물리학식으로만 경험하기 어려운 전기 및 전자기를 직접 눈으로 보고 활용할 수 있습니다. 물리학식으로만 경험하기 어려운 전기 및 전자기를
+                            직접 눈으로 보고 활용할 수 있습니다.</p>
+                        <div class="button">
+                            <a href="#">
+                                <p1>LEARN MORE</p1>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="lab">
+                    <h1>OUTPUT</h1>
+                </div>
+                <div class="container">
+                    <span class="item item1"><a href="#"><img src="https://i.postimg.cc/wjnqs3Px/Rectangle-33.png"></a></span>
+                    <span class="item item1"><a href="#"><img src="https://i.postimg.cc/wjnqs3Px/Rectangle-33.png"></a></span>
+                    <span class="item item1"><a href="#"><img src="https://i.postimg.cc/wjnqs3Px/Rectangle-33.png"></a></span>
+                    <span class="item item1"><a href="#"><img src="https://i.postimg.cc/wjnqs3Px/Rectangle-33.png"></a></span>
+                    <span class="item item1"><a href="#"><img src="https://i.postimg.cc/wjnqs3Px/Rectangle-33.png"></a></span>
+                    <span class="item item1"><a href="#"><img src="https://i.postimg.cc/wjnqs3Px/Rectangle-33.png"></a></span>
+                    <span class="item item1"><a href="#"><img src="https://i.postimg.cc/wjnqs3Px/Rectangle-33.png"></a></span>
+                    <span class="item item1"><a href="#"><img src="https://i.postimg.cc/wjnqs3Px/Rectangle-33.png"></a></span>
+                    <span class="item item1"><a href="#"><img src="https://i.postimg.cc/wjnqs3Px/Rectangle-33.png"></a></span><span class="item item1"><a href="#"><img src="https://i.postimg.cc/wjnqs3Px/Rectangle-33.png"></a></span>
+                  </div>
+
+
+
+                <footer class="footer">
+                    <div class="footer_content">
+                        <img src="https://i.postimg.cc/rpjgWXmf/1.png" alt="한국공학대학교">
+                        <p>15073 경기도 시흥시 산기대학로 237 (정왕동) 한국공학대학교<br>
+                            TEL : 031-8041-1000<br>
+                            입학 TEL :1588-2036 (평일 : 09:00~17:00)
+
+                        </p>
+                    </div>
+                </footer>
+            </div>
+            <script type="text/javascript">
+                (function(w, d, a){
+                    w.__beusablerumclient__ = {
+                        load : function(src){
+                            var b = d.createElement("script");
+                            b.src = src; b.async=true; b.type = "text/javascript";
+                            d.getElementsByTagName("head")[0].appendChild(b);
+                        }
+                    };w.__beusablerumclient__.load(a + "?url=" + encodeURIComponent(d.URL));
+                })(window, document, "//rum.beusable.net/load/b221219e073623u674");
+                </script>
+        </body>
+    </html>
